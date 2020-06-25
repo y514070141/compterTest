@@ -137,7 +137,8 @@ $(function () {
         //1.获取input标签值2.点击查询 增加一个条件
         // 3.分页一共三个参数 rows page keyword
         var keyword=$("[name='keyword']").val();
-        $("#dg").datagrid("load",{keyword:keyword});
+
+        alert(keyword)
     });
     /*部门选择 下拉列表*/
     $("#department").combobox({
