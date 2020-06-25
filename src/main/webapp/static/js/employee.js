@@ -111,7 +111,7 @@ $(function () {
             if (r){
                 //执行删除
                 $.get(
-                    "deleteEmployee?id="+row.id,function (data) {
+                    "deleteEmployee"+row.id,function (data) {
                         if(data.success){
                             $.messager.alert("提示",data.msg,"info");
                             $("#dg").datagrid("reload");
@@ -131,6 +131,13 @@ $(function () {
     $("#reload").click(function () {
         $("[name='keyword']").val('');
         $("#dg").datagrid("reload",{});
+    });
+    //查询  模糊 姓名 手机号
+    $("#search").click(function () {
+        //1.获取input标签值2.点击查询 增加一个条件
+        // 3.分页一共三个参数 rows page keyword
+        var keyword=$("[name='keyword']").val();
+        $("#dg").datagrid("load",{keyword:keyword});
     });
     /*部门选择 下拉列表*/
     $("#department").combobox({
