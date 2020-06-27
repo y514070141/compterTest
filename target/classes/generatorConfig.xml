@@ -37,7 +37,7 @@
 
 		<!-- 数据库连接信息 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-						connectionURL="jdbc:mysql:///mybatis" userId="root" password="1234">
+						connectionURL="jdbc:mysql:///compterTest" userId="root" password="root">
 		</jdbcConnection>
 
 		<!-- java类型处理器 用于处理数据库中的类型到Java中的类型，
@@ -98,7 +98,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="teacher"></table>
+		<table tableName="permission"></table>
 
 	</context>
 </generatorConfiguration>

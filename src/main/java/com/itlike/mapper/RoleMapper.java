@@ -7,8 +7,10 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface RoleMapper {
+    //删除角色表
     int deleteByPrimaryKey(Long rid);
-
+    //删除角色关系表
+    void deleteRoleAndPermissionByRid(Long rid);
     Role selectByPrimaryKey(Long rid);
 
     List<Role> selectAll();
@@ -24,4 +26,5 @@ public interface RoleMapper {
 
     //查询 角色对象 所有的权限
     List<Permission> selectByRid(Long rid);
+
 }

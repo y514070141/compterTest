@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class QueryVo {
-    private int pages;
+    private int page;
     private int rows;
     private String keyword;
 }

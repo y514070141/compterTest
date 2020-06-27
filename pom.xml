@@ -221,6 +221,13 @@
       <version>4.1.4</version>
     </dependency>
 
+<!--    pageContext.request.contentPath-->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.2.1-b03</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -243,7 +250,6 @@
         </dependencies>
       </plugin>
     </plugins>
->>>>>>> 4d03369a503478d4e48a5a3be3f25b14a8a103c5
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

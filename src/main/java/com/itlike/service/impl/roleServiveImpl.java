@@ -32,8 +32,15 @@ public class roleServiveImpl implements roleService {
     //查询角色 所有的 权限
     @Override
     public List<Permission> selectPermissionById(Long rid) {
-        List<Permission> permissions = roleMapper.selectByRid(rid);
-        return permissions;
+        return roleMapper.selectByRid(rid);
+    }
+
+    @Override
+    public void deleteRoleByRid(Long rid) {
+        //1.删除角色关系表
+        roleMapper.deleteRoleAndPermissionByRid(rid);
+        //2.删除角色
+        roleMapper.deleteByPrimaryKey(rid);
     }
 
 }

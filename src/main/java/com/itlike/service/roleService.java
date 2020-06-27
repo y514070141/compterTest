@@ -15,4 +15,6 @@ public interface roleService {
 
     //查询对象 所具有的 所有权限
     List<Permission> selectPermissionById(Long rid);
+    //删除角色
+    void deleteRoleByRid(Long rid);
 }
